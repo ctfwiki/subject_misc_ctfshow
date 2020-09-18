@@ -3,7 +3,10 @@
 20200601*
 未出题目思路/*
 
-upload.cmd
+.idea
+*.zip
+jd-gui*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
