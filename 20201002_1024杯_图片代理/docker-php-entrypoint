@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "oh you find me,flag is just the filename!" > /${FLAG:5:36}
+
+export FLAG=not_here
+FLAG=not_here
+
+php-fpm &
+nginx
+
+tail -f /dev/null

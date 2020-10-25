@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: fastapi
+    ports:
+      - "6666:8000"
+    container_name: fastapi
+    environment:
+      - FLAG=flag{88888888-8888-8888-8888-888888888888}
