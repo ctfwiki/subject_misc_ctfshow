@@ -1,0 +1,10 @@
+version: "3"
+services:
+  mlzx:
+    build: .
+    image: mlzx
+    ports:
+      - "8888:80"
+    container_name: mlzx
+    environment:
+      - FLAG=flag{88888888-8888-8888-8888-888888888888}

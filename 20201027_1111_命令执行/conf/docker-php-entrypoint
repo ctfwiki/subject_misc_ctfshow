@@ -1,0 +1,30 @@
+#!/bin/sh
+
+echo $FLAG > /flag
+export FLAG=not_flag
+FLAG=not_flag
+
+# 备份要保留的命令
+cp /bin/ls /tmp
+cp /bin/cp /tmp
+cp /bin/rm /tmp
+cp /bin/sh /tmp
+cp /usr/local/bin/php /tmp
+# 删除所有命令
+/tmp/rm -rf /bin/*
+/tmp/rm -rf /sbin/*
+/tmp/rm -rf /usr/bin/*
+/tmp/rm -rf /usr/sbin/*
+/tmp/rm -rf /usr/share/*
+/tmp/rm -rf /usr/local/bin/docker-php-ext*
+/tmp/rm -rf /usr/local/bin/docker-php-source
+/tmp/rm -rf /usr/local/bin/p*
+# 还原备份命令
+/tmp/cp /tmp/ls /bin/ls
+/tmp/cp /tmp/rm /bin/rm
+/tmp/cp /tmp/sh /bin/sh
+/tmp/cp /tmp/php /usr/local/bin/php
+# 删除备份
+rm -rf /tmp/*
+
+php -S 0.0.0.0:80 -t /var/www/html
