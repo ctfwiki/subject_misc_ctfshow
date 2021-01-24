@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: lpt
+    ports:
+      - "37241:3333"
+    container_name: lpt
+    environment:
+      - FLAG=flag{10ff6f14-a974-4e53-9eed-0983d5be94ed}
